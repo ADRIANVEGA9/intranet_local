@@ -1,0 +1,480 @@
+/* CSS Document */
+html {
+height: 100%;
+}
+body {
+	height: 90%;
+	background-color: #43474A;
+	background-image: url(../ImagenesSitio/bg.gif) !important;
+	text-align:left;
+	margin:0 auto;
+	z-index:0;
+}	
+#cumple {
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}	
+#header {
+	margin:0 auto;
+	z-index:20;
+	width: 769px;
+}	
+#apCerrajes {
+	position:absolute;
+	left:602px;
+	top:-45px;
+	width:152px;
+	height:18px;
+	z-index:18;
+	visibility: hidden;
+}
+#blanco {
+	margin:0 auto;
+	top:107px;
+	z-index:0;
+	background-color:#FFFFFF;
+	width: 769px;
+	height: 460px;
+	text-align:left;
+	left:0 auto;
+}
+#divCentral {
+	position:absolute;
+	margin:0 auto;
+	left:0 auto;
+	top:107px;
+	width:769px;
+	height:447px;
+	z-index:1;
+}
+#divMenu { /*Capa Menu lateral*/
+	position:absolute;
+	margin:0 auto;
+	left:0px;
+	top:58px;
+	width:160;
+	z-index:1;
+	height: 289px;
+}
+#apIndex {
+	position:absolute;
+	left:0px;
+	top:1px;
+	width:769px;
+	height:445px;
+	z-index:14;
+	vertical-align:middle;
+	text-align:center;
+}
+#navigation td {
+	border-bottom: 1px solid #1B1B1F;
+	}
+/* Color Menú*/
+#navigation a {
+	text-align:left;
+	line-height:16px;
+	letter-spacing:.1em;
+	text-decoration: none;
+	display:block;
+	padding:8px 6px 8px 22px;
+	font-family: "Trebuchet MS";
+	font-size: 8pt;
+	color: #1B1B1F;
+	text-decoration:none;
+	}
+/* Color de sustitución en Menú*/	
+#navigation a:hover {
+	text-align:right;
+	font-weight:bold;
+	font-family: "Trebuchet MS";
+	font-size: 9pt;
+	color: #71bf44;
+	text-decoration:none;
+	}
+/* Color de selección en Menú*/	
+#navigation a:active  {
+	text-align:right;
+	font-weight:bold;
+	font-family: "Trebuchet MS";
+	font-size: 9pt;
+	color: #71bf44;
+	text-decoration:none;
+	}
+.EstiloD4 {
+	font-family: "Trebuchet MS";
+	font-size: 24pt;
+	color: #636363;
+}
+.EstiloD4A {
+	font-family: "Eurostile", "Trebuchet MS";
+	font-size: 28pt;
+	color:#FFFFFF;
+	text-align:center;
+	font-style:inherit;
+	text-decoration:blink;
+	font-weight:bold;
+	border-color:#FFFFFF;
+	border-width:medium;
+	text-shadow:#CCC;
+}
+#DivText {
+	position:absolute;
+	left:104px;
+	top:478px;
+	width:556px;
+	height:23px;
+	z-index:17;
+	visibility: visible;
+}
+.Estilo09 {/*estilo de marquee*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+#apDiv1 {
+	position:absolute;
+	left:0px;
+	top:446px;
+	width:541px;
+	height:35px;
+	z-index:16;
+}
+#apDiv2 {
+	position:absolute;
+	left:4px;
+	top:5px;
+	width:79px;
+	height:20px;
+	z-index:3;
+	visibility: visible;
+}
+#apDiv3 {
+	position:absolute;
+	left:106px;
+	top:5px;
+	width:79px;
+	height:20px;
+	z-index:3;
+	visibility: visible;
+}
+#apDiv4 {
+	position:absolute;
+	left:204px;
+	top:6px;
+	width:79px;
+	height:20px;
+	z-index:3;
+}
+#apDiv5 {
+	position:absolute;
+	left:305px;
+	top:5px;
+	width:79px;
+	height:20px;
+	z-index:3;
+}
+#apDiv6 {
+	position:absolute;
+	left:403px;
+	top:6px;
+	width:79px;
+	height:20px;
+	z-index:3;
+}
+#apDiv7 {
+	position:absolute;
+	left:498px;
+	top:5px;
+	width:79px;
+	height:20px;
+	z-index:3;
+}
+#apDiv8 {
+	position:absolute;
+	left:598px;
+	top:6px;
+	width:88px;
+	height:20px;
+	z-index:3;
+}
+ _____________________________ DIRECTORIO _______________________ 
+
+.EstiloD2 {font-family: "Trebuchet MS"}
+.EstiloD3 {
+	font-family: "Trebuchet MS";
+	font-size: 24pt;
+	color: #ffffff;
+}
+#apCerr {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	overflow:auto;
+	visibility: visible;
+}
+#apQro {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:538px;
+	height:365px;
+	z-index:12;
+	overflow:auto;
+	visibility: hidden;
+}
+#apMex {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+#apGdl {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+#apMty {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+#apMor {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+#apLeo {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+#apSlp {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+#apCam {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+#apNex {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+#apOtro {
+	position:absolute;
+	left:226px;
+	top:58px;
+	width:458px;
+	height:365px;
+	z-index:12;
+	visibility: hidden;
+	overflow:auto;
+}
+.EstiloD10 {
+	font-size: 9pt; 
+	font-weight: bold; 
+	font-family: "Trebuchet MS"; 
+	}
+.EstiloD18 {
+	font-family: "Trebuchet MS"; 
+	font-size: 9pt; 
+	}
+.EstiloD18a {
+	font-family: "Trebuchet MS"; 
+	font-size: 7pt; 
+	}
+.mailto {
+	font-family: "Trebuchet MS"; 
+	font-size: 9pt;
+	text-decoration:none;
+	color:#000000;
+	}
+.mailto:hover {
+	font-family: "Trebuchet MS"; 
+	font-size: 9pt;
+	text-decoration:none;
+	color:#71bf44;
+	}/*
+.mailto:visited {
+	font-family: "Trebuchet MS"; 
+	font-size: 9pt;
+	text-decoration:none;
+	color:#000000;
+	}*/
+.cumpleHoy
+	{
+		color:#FFFFFF;
+		font-family:"Trebuchet MS", Arial;
+		font-size:12pt;
+  		font-weight: bold;
+	}
+ _____________________________ CALENDARIO _______________________ 
+
+#apDiv9 {
+	position:absolute;
+	text-align:right;
+	left:387px;
+	top:-103px;
+	width:362px;
+	height:34px;
+	z-index:13;
+}
+/*#apDiv10 {
+	position:absolute;
+	left:445px;
+	top:-112px;
+	width:315px;
+	height:48px;
+	z-index:6;
+}*/
+#apDiv11 {
+	position:absolute;
+	text-align:right;
+	left:304px;
+	top:-103px;
+	width:445px;
+	height:34px;
+	z-index:13;
+}
+#apCalendar {
+	position:absolute;
+	left:0px;
+	top:1px;
+	width:770px;
+	height:445px;
+	z-index:9;
+	overflow:auto;
+}
+#table {
+	font-family: "Trebuchet MS";
+}
+.Estilo1 {/*borde vacaciones*/
+	font-family: "Trebuchet MS"; 
+	font-size: 10pt; 
+	color: #FFFFFF;
+	text-align:right;
+	background-color:#6666CC;
+
+}
+.Estilo1a {/**/
+	font-family: "Trebuchet MS"; 
+	font-size: 10pt; 
+	color: #FFFFFF;
+	text-align:right;
+	background-color:#71BF44;
+}
+.Estilo1b {/**/
+	font-family: "Trebuchet MS"; 
+	font-size: 10pt; 
+	color: #FFFFFF!important;
+	text-align:right;
+	background-color:#0099FF;
+}
+.Estilo1c {/**/
+	font-family: "Trebuchet MS"; 
+	font-size: 10pt; 
+	color: #FFFFFF;
+	text-align:right;
+	background-color:#71BF44;
+}
+.Estilo1d {/**/
+	font-family: "Trebuchet MS"; 
+	font-size: 10pt; 
+	color: #FFFFFF;
+	text-align:right;
+	background-color:#FF0000;
+}
+.Estilo1e {/**/
+	font-family: "Trebuchet MS"; 
+	font-size: 10pt; 
+	color: #FFFFFF;
+	text-align:right;
+	background-color:#FFCC00;
+}
+.Estilo1n {/*borde vacaciones,numeros*/
+	font-family: "Trebuchet MS"; 
+	font-size: 10pt; 
+	color: #FFFFFF;
+	background-color:#6666CC;
+	text-align:center;
+}
+.Estilo2 {
+	font-family: "Trebuchet MS";
+	font-size: 9pt;
+	color: #616A74;
+	text-align:right;
+	font-weight: bold;
+	background-color:#FFFFFF;
+}
+.Estilo3 {
+	font-family: "Trebuchet MS";
+	font-size: 24pt;
+	color: #ffffff;
+}
+.Estilo4 {
+	font-family: "Trebuchet MS";
+	font-size: 14pt;
+	color:#165B91;
+	text-align:right;
+	}
+.Estilo5 {
+	color: #808284;
+	font-family: "Trebuchet MS";
+	font-size: 10pt;
+	font-weight: bold;
+}
+#menu {
+	position:absolute;
+	left:0px;
+	top:-23px;
+	width:769px;
+	height:38px;
+	z-index:7;
+}

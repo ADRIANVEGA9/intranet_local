@@ -1,0 +1,118 @@
+/*------------ @font-face ------------------*/
+@font-face{
+font-family:'TChevin';
+src: url('../fonts/Chevin-Medium.otf')   format('opentype');
+}
+@font-face{
+font-family:'TChevinLight';
+src: url('../fonts/Chevin-Light.otf')   format('opentype');
+}
+@font-face{
+font-family:'TChevinThin';
+src: url('../fonts/Chevin-Thin.otf')   format('opentype');
+}
+.dayofweek {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #165B91;
+	text-align:center;
+	background-color:#CAE0B1;
+}
+.eDiaActual {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #165B91;
+	text-align:center;
+	background-color:#CAE0B1;
+	border:thick;
+	border-color:#165B91;
+}
+.eDiaActual:hover {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #FFFFFF;
+	text-align:center;
+	background-color:#CAE0B1;
+	border:thick;
+	border-color:#165B91;
+}
+.xeDiaActual {/*formato alterno para día actual*/
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #F1F1E9;
+	text-align:center;
+	background-color:#165B91;
+	border:solid;
+	border-color:#933;
+}
+.eDiaObligatorio {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #FFFFFF;
+	text-align:center;
+	background-color:#71BF44;
+}
+.eDiaVacaciones {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #FFFFFF;
+	text-align:center;
+	background-color:#6666CC;
+}
+.eDiaCuenta  {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #FFFFFF;
+	text-align:center;
+	background-color:#0099FF;
+}
+.eDiaSabadoL {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #FFFFFF;
+	text-align:center;
+	background-color:#71BF44;
+}
+.eDiaSuspension {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #FFFFFF;
+	text-align:center;
+	background-color:#FF0000;
+}
+.eDiaMedio {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #FFFFFF;
+	text-align:center;
+	background-color:#FFCC00;
+}
+.eDiaFinSemana {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #71BF44;
+	text-align:center;
+	background-color:#F1F1E9;
+}
+.eDiaLaboral {
+	font-family: "TChevin"; 
+	font-size: 8pt; 
+	color: #58595B;
+	text-align:center;
+	background-color:#F1F1E9;
+}
+a{
+	text-decoration:none;	
+	cursor: default;
+}
+a:hover{
+	text-decoration:underline;
+	/*background-color:#CAE0E7;	*/
+	color:#CCCCCC;
+	cursor: default;
+}
+a:active{
+	text-decoration:underline;
+	/*background-color:#CAE0E7;	*/
+	color:#CCCCCC;
+}

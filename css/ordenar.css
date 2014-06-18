@@ -1,0 +1,50 @@
+a.ord:active, 
+a.ord:link ,
+a.ord:visited ,
+a.p:active ,
+a.p:link ,
+a.p:visited 
+{
+	color: #666;
+	text-decoration: none;
+}
+a.ord:hover,
+a.p:hover
+{
+	color: #666;
+	text-decoration: underline;
+}
+th {
+	background: #EEE;
+	text-align: left;
+}
+tr {
+	background: #EFE;
+	color: #555;
+	font-family: "Trebuchet MS";
+	font-size: 12px;
+}
+tr a{
+	color: #555;
+	display: block;
+	text-decoration: none;
+}
+tr a:hover,
+tr a:active {
+	color: #EFE;
+	cursor: pointer;
+	display: block;
+}
+tr:hover {
+	background: #71BF44;
+	color: #EFE;
+	cursor: pointer;
+}
+#buscar{
+	display: none;
+}
+.ord {
+	color: #666;
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+}

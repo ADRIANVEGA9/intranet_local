@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_extcerraco" value="name:nombre;datatype:string,name:departamento;datatype:string,name:ext;datatype:string" />
+	<infoitem key="UD_nextel" value="name:Nombre;datatype:string,name:Sucursal/Estado;datatype:string,name:ID;datatype:string" />
+</info>

@@ -1,0 +1,427 @@
+/*------------ @font-face ------------------*/
+@font-face{
+font-family:'TChevin';
+src: url('../fonts/Chevin-Medium.otf')   format('opentype');
+}
+@font-face{
+font-family:'TChevinLight';
+src: url('../fonts/Chevin-Light.otf')   format('opentype');
+}
+@font-face{
+font-family:'TChevinThin';
+src: url('../fonts/Chevin-Thin.otf')   format('opentype');
+}
+/*   ------------- etiquetas  -------------  */
+body{
+	background-color: #F1F1E9;
+	font-family:'TChevin';
+}
+*{
+	margin: 0;
+}/*puedo cambiarlo por *{margin:0;} para que afecte a todos los elementos o body{margin:0;} para que afecte al body*/
+aside article{   
+	display: inline;
+	height: 100px;
+	width: 250px;
+}
+aside article img{  
+	box-shadow: 2px 2px 3px 2px #CCC;
+   -webkit-box-shadow: 2px 2px 3px 2px #CCC;
+   -moz-box-shadow: 2px 2px 3px 2px #CCC;
+}
+footer {
+	background-color: #7AC143;
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.4),0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+	color: #FFFFFF;
+	font-family: "TChevin";
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 1000px;
+}
+header,nav,section,article,aside,footer,hgroup, figure { /*Elementos semanticos html5 para IE 7 y 8*/
+	display: block; /*declarado como bloque y no como línea*/
+}
+header {
+	background-color: #7AC143;	/* RGB (122,193,67)*/
+	border-radius: 5px 5px 0px 0px;
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.4),0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+	height: auto;
+	margin: 0 auto;
+	width: 1000px;
+	min-width: 322px;
+}
+img {
+	border: 0;	/*quita el borde azul de las imagenes con link*/
+	text-decoration: none;
+}
+label {
+	color:#80817C;
+}
+/* -----------  #id's  ------------- */
+#apCalendar {
+	background: #FFF;
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 95%;
+}
+#busqueda {
+	display: inline-block;
+	margin-left: 5%;
+	width: 95%;
+}
+#busqueda form {
+	width: 95%;
+}
+#busqueda input[type="text"] {
+	border-radius: 0px 10px 0px 10px;
+	border: none;
+	box-shadow: 3px 3px 10px 0px #919191;
+	color: #7AC143;
+	font-family: "TChevin";
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+	outline: 0;
+	padding-left: 5px;
+	vertical-align: middle;
+	width: 100%;
+}
+#busqueda input[type="text"]:hover {
+	background: #7AC143;
+	border-radius: 0px 10px 0px 10px;
+	color: #FFF;
+	transition: all 1s ease;
+}
+#contenedor {
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.4),0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+	height: auto;
+	margin: 0 auto;
+	min-height: 400px;
+	overflow: hidden;
+	width: 1000px;
+}
+#cumple, #home {
+	width: 100%;
+}
+#logo { /*logo cerrajes en header*/
+	display:inline-table;
+	float: right;
+	height: 80px;
+	padding: 25px;
+	text-align: right;
+}
+#mostrar {
+	display: inline-block;
+	margin-top: 15px;
+	transition: all 1.0s ease;
+	vertical-align: top;
+	width: 78%;
+}
+#opciones {
+	display: inline-block;
+	margin-top: 15px;
+	vertical-align: top;
+	width: 20%;
+}
+#regresar {
+	background: #71BF44;
+	border-left: #222;
+	border-radius: 50px;
+	border-top: 1px;
+	color: #FFF;
+	display: inline-block;
+	height: 60px;
+	outline: none;
+	position: relative;
+	text-align: center;
+	text-shadow: 1px 1px 1px #666;
+	top: .5em;
+	width: 60px;
+}
+#regresar:active {
+	border-color: #71bf44 !important;
+	color: #71BF44 !important;
+	text-shadow: 1px 1px 1px #71BF44;
+}
+#regresar:hover {
+	background-color: #92D36D !important;
+	color: #EEE !important;
+}
+#regresar a {	
+	border-radius: 50px;
+	color: #FEFEFE;
+	display: block;
+	font-size: .8em;
+	line-height: 60px;
+	text-decoration: none;
+}
+#resultado {
+	border-radius: 5px;
+	border: solid 1px #d3d3d3;
+	box-shadow: 0 0 15px #999;
+	margin-bottom: 20px;
+	padding: 15px;
+	text-align: center;
+}
+#salas  {
+	border-radius: 5px;
+	border: solid 1px #d3d3d3;
+	box-shadow: 0 0 15px #999;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+#salas #hora_termino {
+	float: right;
+}
+#salas input[type="text"],
+#salas input[type="number"],
+#salas input[type="time"] {
+	background-color: #F1F1E2;
+	border-bottom-color: #FFF;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	color: #80817C;
+	line-height: 1.7em;
+	outline: none;
+	width: 100%;
+}
+#salas input[type="time"] {
+	width: 29%;
+}
+#salas input[type="radio"],
+#salas input[type="checkbox"] {
+	float: right;
+}
+#salas #enviar {
+	background: #71BF44;
+	border-left: #222;
+	border-radius: 50px;
+	border-top: 1px;
+	color: #FFF;
+	height: 60px;
+	left: 510px;
+	outline: none;
+	position: relative;
+	text-shadow: 1px 1px 1px #666;
+	top: .5em;
+	width: 60px;
+}
+#salas #enviar:active {
+	border-color: #71bf44 !important;
+	color: #71BF44 !important;
+	text-shadow: 1px 1px 1px #71BF44;
+}
+#salas #enviar:hover {
+	background-color: #92D36D !important;
+	color: #EEE !important;
+}
+#salas #fecha {
+	width: auto;
+}
+#sala_eventos, #sala_formato {
+	display: inline-block;
+	height: auto;
+	padding-top: 10px;
+	vertical-align: top;	
+}
+#sala_eventos {
+	margin-left: 12px;
+	width: 35%;
+}
+#sala_formato {
+	margin-left: 1em;
+	width: 60%;
+}
+#sala_text {
+	background: #F1F1E2;
+	border-radius: 5px;
+	color: #797676;
+	height: auto;
+	min-height: 100px;
+	padding: 5px;
+	width: 100%;
+}
+#sala_text textarea {
+	background-color: #F1F1E2;
+	border: none;
+	max-height: 570px;
+	max-width: 100%;
+	outline: none;
+	resize: none;
+	width: 100%;
+}
+#titulo {
+	color: #EFE;
+	font-family: "TChevin";
+	font-size: 38px;
+	min-height: 120px;
+	padding-left: 25px;
+}
+#tblCalendar {
+	border:none;
+	width: 100%;
+}
+#tblCalendar td {
+	text-align: center;
+}
+#tblYearSig {
+	border:none;
+	width: 25%;
+}
+#tblYearSig td {
+	text-align: center;
+}
+#tblYearSigEne {
+	border:none;
+	width: 50%;
+}
+#txt {
+	border:none;
+	width: 100%;
+}
+#unidad{
+	display: inline-block;
+	margin-bottom: 20px;
+	text-align: left;
+	width: 100%;
+}
+#unidadNeg {
+	background: #FFF;
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 3px 3px 10px 0px #919191;
+	display: inline-block;
+	font-family: "TChevin";
+	font-size: 14px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	margin-left: 5%;
+	width: 90%;
+}
+#unidadNeg:hover {
+	background: #FFF;
+	color: #FFF !important;
+	font-size: 16px;
+}
+#unidadNeg a {
+	color: #7AC143;
+	display: block;
+	font-family: "TChevin";
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 5px;
+	text-decoration: none;
+}
+#unidadNeg a:hover {
+	background: #7AC143;
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 3px 3px 10px 0px #7AC143;
+	color: #FFF !important;
+	transition: all 1s ease;
+	}
+.active {
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 3px 3px 10px 0px #7AC143;
+	color: #FFF !important;
+	background: #7AC143;
+	transition: all 1s ease;
+}
+.circulo {
+	background: #71BF44;
+	border-radius: 70px;
+	box-shadow: -2px 2px 2px rgba(0, 0, 0, .8);
+	color: #FEFEFE;
+	display: inline-block;
+	font-size: 1.2em;
+	height: 1.2em;
+	line-height: 1.2em;
+	margin-bottom: 5px;
+	text-align: center;
+	width: 1.2em;
+}
+.DiaObligatorio {
+	background-color:#71BF44;
+	color: #FFFFFF;
+	font-family: "TChevinThin"; 
+	font-size: 16px; 
+	text-align:left;
+	font-weight: bold;
+}
+.DiaCuenta  {
+	background-color:#0099FF;
+	color: #FFFFFF;
+	font-family: "TChevinThin"; 
+	font-size: 16px; 
+	text-align:left;
+	font-weight: bold;
+}
+
+.DiaMedio {
+	background-color:#FFCC00;
+	color: #FFFFFF;
+	font-family: "TChevinThin"; 
+	font-size: 16px; 
+	text-align:left;
+	font-weight: bold;
+}
+.mes {
+	margin: 0 auto;
+}
+.mesNombre {
+	background-color:#FFF;
+	color: #616A74;
+	font-family: "TChevin";
+	font-size: 1em;
+	font-weight: bold;
+	text-align:right;
+}
+.sala_check, 
+.sala_titulos {
+	display: inline-block;
+	vertical-align: top;
+}
+.sala_check {
+	border-left: #C6C7BD;
+	border-width: 2px;
+	border-left-style: double;
+	margin: 15px 0px 15px 0px;
+	width: 58%;
+}
+.sala_check label {
+	margin-left: 2em;
+}
+.sala_der {
+	font-size: .8em;
+	margin: 10px 20px 10px 0px;
+	text-align: right;
+	width: 95%;
+}
+.sala_titulos {
+	margin-top: 15px;
+	width: 40%;
+}
+.topPadding {
+	padding-top: 12px;
+}
+.yearActual {
+	color:#165B91;
+	font-family: "TChevin";
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align:right;
+}
+.yearSiguiente {
+	color:#F1880B;
+	font-family: "TChevin";
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align:right;
+}
+/*  ------------- media querys  ------------- */
+@media screen and (max-width:815px){
+}

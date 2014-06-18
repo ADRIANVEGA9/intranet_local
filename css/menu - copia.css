@@ -1,0 +1,48 @@
+#tableMenu {
+	border: 0px;/*font-size: 0px;/*dar tamaño de 0 (cero) al font para evitar que el inline-block ponga espacios en blanco entre cada li*/
+	font-family: "trebuchet MS", "Verdana regular";
+	font-size: 14px;
+	letter-spacing:normal;
+	margin: 0 auto;
+	width: 100%;
+	min-width: 300px;
+	padding-top: 0px;/*para dar el espacio entre el encabezao y el menú*/
+}
+#tableMenu table tr{
+	border: none;
+	padding: 0px;
+}
+#tableMenu table tr td{
+	background-color: rgb(122,193,67);/* RGB (122,193,67) #7AC143 */
+	background: gradient(linear, left top,left bottom, from(#9CCF72), to(#7AC143));
+	background: linear-gradient(#9CCF72, #7AC143);
+	font-weight: bold;
+	line-height: 30px;/*alto del menú*/
+	width: 16.67%;
+}
+#tableMenu table tr td:hover{
+	background: #71AF40;
+	background: gradient(linear, left top,left bottom, from(#7AC143), to(#9CCF72));
+	background: linear-gradient(#7AC143, #9CCF72);
+	font-weight: bold;
+}
+#tableMenu table tr td a{
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+#tableMenu table {user agent stylesheet
+    border-collapse: expression(cellSpacing = "0px");/* quitar espacio entre celdas en IE7*/
+    /*border-collapse: separate;*/
+    border-spacing: 0px;
+    height: 30px;
+    width:100%;
+}
+.activo {
+	color: #666;
+	cursor: default;
+	font-size: 16px;
+	text-align: center;
+}
