@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=UTF-8');
+//header('Content-Type: text/html; charset=UTF-8');
 $mysqli = new mysqli('localhost', 'Cerrajes', 'PRAXAIR1', 'intranet');
 $mysqli->set_charset("utf8");
 

@@ -1,21 +1,38 @@
 <!doctype html>
 <?php $m=2; 
-  require'Connections/conect.php';
- //inicializo el criterio y recibo cualquier cadena que se desee buscar
-$criterio = '';		        
-if ($_GET["criterio"]!="")
-{
-	$txt_criterio = $_GET["criterio"];
-	$criterio = " where nombre like '%" . $txt_criterio . "%' or departamento like '%" . $txt_criterio . "%' or ext like '%" . $txt_criterio . "%'";
+  require"Connections/conect.php";
+  /***VARIABLES POR GET ***/
+$numero1 = count($_GET);
+$tags1 = array_keys($_GET);// obtiene los nombres de las varibles
+$valores1 = array_values($_GET);// obtiene los valores de las varibles
+
+for($i=0;$i<$numero1;$i++){// crea las variables y les asigna el valor
+$$tags1[$i]=$valores1[$i];
 }
 
-$sql="SELECT * FROM intranet.directorio ".$criterio;
-$res=mysql_query($sql);
-$numeroRegistros=mysql_num_rows($res);
+if (isset($orden)) {
+  $orden = $orden;
+} else {
+	$orden='nombre';
+}
+
+ //inicializo el criterio y recibo cualquier cadena que se desee buscar	        
+if (isset($criterio))
+{
+	$txt_criterio = $criterio;
+	$criterio = " where nombre like '%" . $txt_criterio . "%' or departamento like '%" . $txt_criterio . "%' or ext like '%" . $txt_criterio . "%'";
+}else{
+	$txt_criterio = " ";
+	$criterio = " where 1";	
+}
+
+$sql				=	"SELECT * FROM intranet.directorio ".$criterio;
+$res 				=	$mysqli->query($sql);
+$numeroRegistros	=	$res->num_rows;
 ?>
 <html lang="es">
 <head>
-<meta>
+<meta charset="utf-8">
 <link rel="shortcut icon" href="favicon.ico">
 <title>Cerrajes&reg; el herraje ideal para su mueble</title>
 <link rel="stylesheet" href="css/estilos.css">
@@ -55,6 +72,8 @@ $numeroRegistros=mysql_num_rows($res);
 
 		<section id="mostrar">
 			<?php
+			// var_dump($txt_criterio);
+			// var_dump($criterio);
 		       
 				if($numeroRegistros<=0)
 				{
@@ -68,14 +87,14 @@ $numeroRegistros=mysql_num_rows($res);
 						$orden="nombre";
 					}
 						//creacion de la consulta
-						$sql="SELECT * FROM intranet.directorio ".$criterio." ORDER BY ".$orden.",nombre ASC ";
-						$res=mysql_query($sql);
-
+						$sql	=	"SELECT * FROM intranet.directorio ".$criterio." ORDER BY ".$orden.",nombre ASC ";
+						$res	=	$mysqli->query($sql);
+						
 						echo "<table width='100%' border='0' cellspacing='1' cellpadding='1'>";
 						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=nombre&criterio=".$txt_criterio."'>Nombre</a></th>";
 						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=departamento&criterio=".$txt_criterio."'>Departamento</a></th>";
 						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=ext&criterio=".$txt_criterio."'>Extensi&oacute;n</a></th>";
-						while($registro=mysql_fetch_array($res))
+						while($registro=$res->fetch_array(MYSQLI_ASSOC ))
 						{
 			?>
 			<!-- tabla de resultados -->

@@ -1,13 +1,14 @@
 <?php 
 header('Content-type: application/json');
-require_once("../Connections/conect.php");
-$sql="SELECT * FROM intranet.salas ";
-$res=mysqli_connect($sql);
+require"../Connections/conect.php";
+//var_dump($mysqli);
+$sql = "SELECT * FROM intranet.salas ";
+$res = $mysqli->query($sql);
 //mysql_query("SET NAMES 'utf8'");
-$numeroRegistros=mysqli_stmt_num_rows ($res);
+$numeroRegistros = $res->num_rows;
 echo '[';
 $separator = "";
-while($registro=mysqli_fetch_array($res))
+while($registro=$res->fetch_array(MYSQLI_ASSOC ))
 	{
 		echo $separator;
 		echo '	{ 

@@ -1,27 +1,40 @@
 <!doctype html>
 <?php $m=6; 
-  require_once("Connections/conect.php");
- //inicializo el criterio y recibo cualquier cadena que se desee buscar
-$criterio = "";		        
-if ($_GET["criterio"]!="")
+  require"Connections/conect.php";
+  /***VARIABLES POR GET ***/
+$numero1 = count($_GET);
+$tags1 = array_keys($_GET);// obtiene los nombres de las varibles
+$valores1 = array_values($_GET);// obtiene los valores de las varibles
+
+for($i=0;$i<$numero1;$i++){// crea las variables y les asigna el valor
+$$tags1[$i]=$valores1[$i];
+}
+
+if (isset($orden)) {
+  $orden = $orden;
+} else {
+	$orden='nombre';
+}
+       
+if (isset($criterio))
 {
-	$txt_criterio = $_GET["criterio"];
+	$txt_criterio = $criterio;
 	$criterio = " where nombre like '%" . $txt_criterio . "%' or telefono like '%" . $txt_criterio . "%' or numero like '%" . $txt_criterio . "%' or unidad like '%" . $txt_criterio . "%'";
 }else{
 	$txt_criterio = "Tiendas Cerrajes";
 	$criterio = " where unidad like '%" . $txt_criterio . "%'";	
 }
 
-$sql="SELECT * FROM intranet.ncortos ".$criterio;
-$res=mysql_query($sql);
-$numeroRegistros=mysql_num_rows($res);
-$unidad="SELECT unidad FROM intranet.ncortos GROUP BY unidad";
-$resUni=mysql_query($unidad);
-$regUni=mysql_num_rows($resUni);
+$sql				=	"SELECT * FROM intranet.ncortos ".$criterio;
+$res 				=	$mysqli->query($sql);
+$numeroRegistros	=	$res->num_rows;
+$unidad = "SELECT unidad FROM intranet.ncortos GROUP BY unidad";
+$resUni = $mysqli->query($unidad);
+$regUni = $resUni->num_rows;
 ?>
 <html lang="es">
 <head>
-<meta>
+<meta charset="utf-8">
 <link rel="shortcut icon" href="favicon.ico">
 <title>Cerrajes&reg; el herraje ideal para su mueble</title>
 <link rel="stylesheet" href="css/estilos.css">
@@ -51,7 +64,7 @@ $regUni=mysql_num_rows($resUni);
 		<section id="opciones">
 			<section id="unidad">
 				<?
-				while($rUnidad=mysql_fetch_array($resUni))
+				while($rUnidad=$resUni->fetch_array(MYSQLI_ASSOC))
 						{
 							echo "<section id='unidadNeg'><a class=' ";
 							if ($rUnidad["unidad"]==$txt_criterio)
@@ -85,18 +98,18 @@ $regUni=mysql_num_rows($resUni);
 					}
 						//creacion de la consulta
 						$sql="SELECT * FROM intranet.ncortos ".$criterio." ORDER BY ".$orden.",nombre ASC ";
-						$res=mysql_query($sql);
+						$res = $mysqli->query($sql);
 
 						echo "<table width='100%' border='0' cellspacing='1' cellpadding='1'>";
 						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=numero&criterio=".$txt_criterio."'>N&uacute;mero Corto</a></th>";
 						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=telefono&criterio=".$txt_criterio."'>Tel&eacutefono</a></th>";
 						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=nombre&criterio=".$txt_criterio."'>Nombre</a></th>";
-						while($registro=mysql_fetch_array($res))
+						while($registro=$res->fetch_array(MYSQLI_ASSOC))
 						{							
 			?>
 			<!-- tabla de resultados -->
 			  <tr>
-			    <td><b><? echo $registro["numero"]; ?></b></font></td>
+			    <td><b><? if ($registro["numero"]==0){ echo '-';} else { echo $registro["numero"]; }?></b></font></td>
 			    <td><b><? echo $registro["telefono"]; ?></b></font></td>
 			    <td><b><? echo $registro["nombre"]; ?></b></font></td>
 			  </tr>

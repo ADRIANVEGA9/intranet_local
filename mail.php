@@ -21,7 +21,7 @@ if (isset($orden)) {
 if (isset($criterio))
 {
 	$txt_criterio = $criterio;
-	$criterio = " where nombre like '%" . $txt_criterio . "%' or direccion like '%" . $txt_criterio . "%' or depto like '%" . $txt_criterio . "%' or unidad like '%" . $txt_criterio . "%'";
+	$criterio = " where nombre like '%" . $txt_criterio . "%' or direccion like '%" . $txt_criterio . "%' or depto like '%" . $txt_criterio . "%' or unidad like '%" . $txt_criterio . "%' or puesto like '%" . $txt_criterio . "%'";
 }else{
 	$txt_criterio = "CerracoMex";
 	$criterio = " where unidad like '%" . $txt_criterio . "%'";	
@@ -32,13 +32,13 @@ $sql="SELECT * FROM intranet.correos ".$criterio;
 $res = $mysqli->query($sql);
 $numeroRegistros=$res->num_rows;
 
-$unidad="SELECT unidad FROM intranet.correos GROUP BY unidad";
-$resUni=$mysqli->query($unidad);
-$regUni=$resUni->num_rows;
+$unidad = "SELECT unidad FROM intranet.correos GROUP BY unidad";
+$resUni = $mysqli->query($unidad);
+$regUni = $resUni->num_rows;
 ?>
 <html lang="es">
 <head>
-<meta>
+<meta charset="utf-8">
 <link rel="shortcut icon" href="favicon.ico">
 <title>Cerrajes&reg; el herraje ideal para su mueble</title>
 <link rel="stylesheet" href="css/estilos.css">
@@ -103,9 +103,10 @@ $regUni=$resUni->num_rows;
 						$sql="SELECT * FROM intranet.correos ".$criterio." ORDER BY ".$orden.",nombre ASC ";
 						$res = $mysqli->query($sql);
 						echo "<table width='100%' border='0' cellspacing='1' cellpadding='1'>";
-						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=nombre&criterio=".$txt_criterio."'>Nombre</a></th>";
-						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=direccion&criterio=".$txt_criterio."'>Direcci&oacute;n</a></th>";
-						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=depto&criterio=".$txt_criterio."'>Sucursal/Departamento</a></th>";
+						echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=nombre&criterio=".$txt_criterio."'>Nombre</a></th>";
+						echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=direccion&criterio=".$txt_criterio."'>Direcci&oacute;n</a></th>";
+						echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=depto&criterio=".$txt_criterio."'>Sucursal/Departamento</a></th>";
+						echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=puesto&criterio=".$txt_criterio."'>Puesto</a></th>";
 						while($registro=$res->fetch_array(MYSQLI_ASSOC ))
 						{
 							//var_dump($registro);
@@ -116,6 +117,7 @@ $regUni=$resUni->num_rows;
 							    <td><b><? echo $registro['nombre']; ?></b></font></td>
 							    <td><b><a href="mailto:<? echo $registro["direccion"]; ?>"><? echo $registro["direccion"]; ?></a></b></font></td>
 							    <td><b><? echo $registro["depto"]; ?></b></font></td>
+							    <td><b><? echo $registro["puesto"]; ?></b></font></td>
 							  </tr>
 							<!-- fin tabla resultados -->
 						<?
