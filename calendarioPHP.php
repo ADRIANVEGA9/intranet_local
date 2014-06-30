@@ -95,6 +95,7 @@ static $day_headings = array('D','L','M','M','J','V','S');
 $maxdays = date('t', $first_of_month);
 //'t' obtiene el numero de dias del mes seleccionado de 28 a 31
 $date_info = getdate($first_of_month);
+//var_dump($date_info);
 //getdate Devuelve un valor array asociativo que contiene información de fecha 
 /*Clave	Descripción	Ejemplo de valores devueltos
 "seconds"	Representación numérica de segundos	0 a 59
@@ -109,23 +110,23 @@ $date_info = getdate($first_of_month);
 "month"	Una representación textual completa de un mes, como January o March	January a December
 0	Segundos desde el Epoch Unix, similar a los valores devueltos por time() y usados por date(). 	Depende del sistema, típicamente -2147483648 a 2147483647. 
 */
-$month = $date_info['mon']; //obtiene el mes del array date_info[ ]
+$month = $date_info['month']; //obtiene el mes del array date_info[ ]
 $year = $date_info['year']; //obtiene el año del array date_info[ ]
-
-switch ($date_info['mon']) { 
-case 1 : $date_info[month]="enero";break; 
-case 2 : $date_info[month]="febrero";break; 
-case 3 : $date_info[month]="marzo";break; 
-case 4 : $date_info[month]="abril";break; 
-case 5 : $date_info[month]="mayo";break; 
-case 6 : $date_info[month]="junio";break; 
-case 7 : $date_info[month]="julio";break; 
-case 8 : $date_info[month]="agosto";break; 
-case 9 : $date_info[month]="septiembre";break; 
-case 10 : $date_info[month]="octubre";break; 
-case 11 : $date_info[month]="noviembre";break; 
-case 12 : $date_info[month]="diciembre";break; 
+switch ($date_info['month']) { 
+case 1 : $date_info['mon']="enero";break; 
+case 2 : $date_info['mon']="febrero";break; 
+case 3 : $date_info['mon']="marzo";break; 
+case 4 : $date_info['mon']="abril";break; 
+case 5 : $date_info['mon']="mayo";break; 
+case 6 : $date_info['mon']="junio";break; 
+case 7 : $date_info['mon']="julio";break; 
+case 8 : $date_info['mon']="agosto";break; 
+case 9 : $date_info['mon']="septiembre";break; 
+case 10 : $date_info['mon']="octubre";break; 
+case 11 : $date_info['mon']="noviembre";break; 
+case 12 : $date_info['mon']="diciembre";break; 
 }; 
+//var_dump($date_info['month']);
 
 $calendar = ("<table "). 
 ("border='0' "). 

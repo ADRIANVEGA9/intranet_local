@@ -126,6 +126,9 @@ function validarTxtNum(e) {
 				  		<input name="sala" type="radio" id="sala_4" form="salas" tabindex="13" value="Sala de juntas" required>
 					    <label for="sala_4">Sala de juntas<span></span></label>
 				    <br>
+				  		<input name="sala" type="radio" id="sala_5" form="salas" tabindex="13" value="Sala de Juntas Tiendas" required>
+					    <label for="sala_5">Sala de Juntas Tiendas<span></span></label>
+				    <br>
 				      </p>
 					</section>
 				  <article class="sala_titulos"><p><div class="circulo">E</div>quipo</p></article>

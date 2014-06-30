@@ -1,5 +1,7 @@
 <!doctype html>
-<?php $m=1; ?>
+<?php $m=1; 
+ini_set('display_errors',false); //cambiar facilmente si queremos ver los errores
+?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
