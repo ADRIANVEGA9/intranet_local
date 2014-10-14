@@ -20,15 +20,19 @@ if (isset($orden)) {
 if (isset($criterio))
 {
 	$txt_criterio = $criterio;
-	$criterio = " where nombre like '%" . $txt_criterio . "%' or departamento like '%" . $txt_criterio . "%' or ext like '%" . $txt_criterio . "%'";
+	$criterio = " where nombre like '%" . $txt_criterio . "%' or departamento like '%" . $txt_criterio . "%' or ext like '%" . $txt_criterio . "%' or unidad like '%" . $txt_criterio . "%' ";
 }else{
-	$txt_criterio = " ";
-	$criterio = " where 1";	
+	$txt_criterio = "CerracoMex";
+	$criterio = " where unidad like '%" . $txt_criterio . "%'";	
 }
 
 $sql				=	"SELECT * FROM intranet.directorio ".$criterio;
 $res 				=	$mysqli->query($sql);
 $numeroRegistros	=	$res->num_rows;
+
+$unidad = "SELECT unidad FROM intranet.directorio GROUP BY unidad";
+$resUni = $mysqli->query($unidad);
+$regUni = $resUni->num_rows;
 ?>
 <html lang="es">
 <head>
@@ -55,12 +59,23 @@ $numeroRegistros	=	$res->num_rows;
 	<header>
         <section id="logo"><a href="http://www.cerrajes.com"  target="_blank"><img src="imagenesSitio/logo.png"></a></section>
         <section id="titulo">directorio - extensiones</section>
-		<?php  require_once("menu.php") ?>
+		<?php  require"menu.php"; ?>
 	</header>
 	<section id="contenedor">
 
 		<section id="opciones">
 			<section id="unidad">
+				<?
+				while($rUnidad=$resUni->fetch_array(MYSQLI_ASSOC))
+						{
+							echo "<section id='unidadNeg'><a class=' ";
+							if ($rUnidad["unidad"]==$txt_criterio)
+							{
+								echo "active";
+							}
+							echo"'href='".$_SERVER["PHP_SELF"]."?&criterio=".$rUnidad["unidad"]."'>".$rUnidad["unidad"]."</a></section>";
+						}
+				?>
 				<section id="busqueda">
 					<form action="directorio.php" method="get" >
 						<input type="text" name="criterio" size="22" maxlength="150" placeholder="buscar: <?php  echo $txt_criterio; ?>">

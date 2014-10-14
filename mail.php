@@ -27,10 +27,9 @@ if (isset($criterio))
 	$criterio = " where unidad like '%" . $txt_criterio . "%'";	
 }
 
-$sql="SELECT * FROM intranet.correos ".$criterio;
-//$res=mysql_query($sql);
-$res = $mysqli->query($sql);
-$numeroRegistros=$res->num_rows;
+$sql				=	"SELECT * FROM intranet.correos ".$criterio;
+$res 				=	$mysqli->query($sql);
+$numeroRegistros	=	$res->num_rows;
 
 $unidad = "SELECT unidad FROM intranet.correos GROUP BY unidad";
 $resUni = $mysqli->query($unidad);

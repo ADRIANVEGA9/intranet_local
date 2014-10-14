@@ -94,7 +94,7 @@ function validarTxtNum(e) {
 					<section id="sala_text">
 	                  <input name="nombre_solicita" type="text" required id="nombre_solicita" form="salas" placeholder="Nombre:" tabindex="1" onkeypress="return validar(event)">
 	                  <input name="departamento" type="text" required id="departamento" form="salas" placeholder="Departamento" tabindex="2" onkeypress="return validar(event)">
-	                  <input name="ext" type="number" id="ext" form="salas" placeholder="Extensión:" max="5075" min="200" tabindex="3" onkeypress="return validarNum(event)">
+	                  <input name="ext" type="number" id="ext" form="salas" placeholder="Extensión:" max="328" min="101" tabindex="3" onkeypress="return validarNum(event)">
 	                </section>
 				  	<article><p><div class="circulo">I</div>nformación del evento</p></article>
 					<section id="sala_text">
@@ -157,9 +157,9 @@ function validarTxtNum(e) {
 					    <input name="coffe[]" type="checkbox" id="coffe_2" form="salas" tabindex="20" value="Té">
 					    <label for="coffe_2">Té:<span></span></label>			        
 				    <br>
-					    <input name="coffe[]" type="checkbox" id="coffe_3" form="salas" tabindex="21" value="Jugo">
+					    <!-- <input name="coffe[]" type="checkbox" id="coffe_3" form="salas" tabindex="21" value="Jugo">
 					    <label for="coffe_3">Jugo:<span></span></label>			        
-				    <br>
+				    <br> -->
 					    <input name="coffe[]" type="checkbox" id="coffe_4" form="salas" tabindex="22" value="Comida">
 					    <label for="coffe_4">Comida:<span></span></label>			        
 				    <br>

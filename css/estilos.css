@@ -40,7 +40,7 @@ footer {
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
-	width: 1200px;
+	width: 1000px;
 }
 header,nav,section,article,aside,footer,hgroup, figure { /*Elementos semanticos html5 para IE 7 y 8*/
 	display: block; /*declarado como bloque y no como línea*/
@@ -51,7 +51,7 @@ header {
 	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.4),0px 0px 0px 0px rgba(0, 0, 0, 0.4);
 	height: auto;
 	margin: 0 auto;
-	width: 1200px;
+	width: 1000px;
 	min-width: 322px;
 }
 img {
@@ -103,7 +103,7 @@ label {
 	margin: 0 auto;
 	min-height: 400px;
 	overflow: hidden;
-	width: 1200px;
+	width: 1000px;
 }
 #cumple, #home {
 	width: 100%;
@@ -272,7 +272,7 @@ label {
 }
 #tblYearSig {
 	border:none;
-	width: 25%;
+	width: 28%;
 }
 #tblYearSig td {
 	text-align: center;
@@ -345,40 +345,42 @@ label {
 	width: 1.2em;
 }
 .DiaObligatorio {
-	background-color:#71BF44;
-	color: #FFFFFF;
-	font-family: "TChevinThin"; 
-	font-size: 16px; 
-	text-align:left;
-	font-weight: bold;
+	background-color: #CBECB8;
+	border: solid #71BF44 1px;
+	border-radius: 3px;
+	color: #71BF44;
+	font-size: 16px;
+	padding: 0 .25em;
 }
 .DiaCuenta  {
-	background-color:#0099FF;
-	color: #FFFFFF;
-	font-family: "TChevinThin"; 
-	font-size: 16px; 
-	text-align:left;
-	font-weight: bold;
+	background-color: #F09EB8;
+	border-radius: 3px;
+	border: solid #C73463 1px;
+	color: #C73463;
+	font-size: 16px;
+	padding: 0 .25em;
+	text-align: left;
 }
 
 .DiaMedio {
-	background-color:#FFCC00;
-	color: #FFFFFF;
-	font-family: "TChevinThin"; 
-	font-size: 16px; 
-	text-align:left;
-	font-weight: bold;
+	background-color: #F1D76E;
+	border-radius: 3px;
+	border: solid #947D22 1px;
+	color: #947D22;
+	font-size: 16px;
+	padding: 0 .25em;
+	text-align: left;
 }
 .mes {
 	margin: 0 auto;
 }
 .mesNombre {
-	background-color:#FFF;
-	color: #616A74;
-	font-family: "TChevin";
+	border-radius: 3px;
 	font-size: 1em;
 	font-weight: bold;
-	text-align:right;
+	margin-bottom: .2em;
+	padding: 0 .5em .1em;
+	text-align: right;
 }
 .sala_check, 
 .sala_titulos {
@@ -409,15 +411,19 @@ label {
 	padding-top: 12px;
 }
 .yearActual {
-	color:#165B91;
-	font-family: "TChevin";
+	background: #E1EEF8;
+	border-radius: 5px;
+	border: solid #165B91 1px;
+	color: #165B91;
 	font-size: 1.5em;
 	font-weight: bold;
-	text-align:right;
+	text-align: right;
 }
 .yearSiguiente {
+	background: #F8E9D7;
+	border-radius: 5px;
+	border: solid #F1880B 1px;
 	color:#F1880B;
-	font-family: "TChevin";
 	font-size: 1.5em;
 	font-weight: bold;
 	text-align:right;

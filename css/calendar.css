@@ -11,33 +11,38 @@ src: url('../fonts/Chevin-Light.otf')   format('opentype');
 font-family:'TChevinThin';
 src: url('../fonts/Chevin-Thin.otf')   format('opentype');
 }
+table {
+	border-collapse: separate;
+	border-radius: 2px;
+	border-spacing: .2em;
+	border: solid #CAE0B1 1px;
+}
 .dayofweek {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
+	background-color: #CAE0B1;
+	border-radius: 2px;
+	border-spacing: 0;
+	border: solid #ccc 1px;
 	color: #165B91;
-	text-align:center;
-	background-color:#CAE0B1;
+	font-size: 8pt;
+	text-align: center;
 }
 .eDiaActual {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
+	background-color: #CAE0B1;
+	border:solid;
+	border-color:#3393DF;
+	border-radius: 20%;
 	color: #165B91;
-	text-align:center;
-	background-color:#CAE0B1;
-	border:thick;
-	border-color:#165B91;
+	display: block;
+	font-size: .9em;
+	height: 100%;
 }
 .eDiaActual:hover {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
-	color: #FFFFFF;
-	text-align:center;
-	background-color:#CAE0B1;
-	border:thick;
-	border-color:#165B91;
+	background-color:#165B91;
+	border:solid;
+	border-color:#3393DF;
+	color: #CAE0B1;
 }
 .xeDiaActual {/*formato alterno para día actual*/
-	font-family: "TChevin"; 
 	font-size: 8pt; 
 	color: #F1F1E9;
 	text-align:center;
@@ -46,11 +51,12 @@ src: url('../fonts/Chevin-Thin.otf')   format('opentype');
 	border-color:#933;
 }
 .eDiaObligatorio {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
-	color: #FFFFFF;
-	text-align:center;
-	background-color:#71BF44;
+	background-color: #CBECB8;
+	border: solid #71BF44 1px;
+	border-radius: 3px;
+	color: #71BF44;
+	font-size: 8pt;
+	text-align: center;
 }
 .eDiaVacaciones {
 	font-family: "TChevin"; 
@@ -60,11 +66,11 @@ src: url('../fonts/Chevin-Thin.otf')   format('opentype');
 	background-color:#6666CC;
 }
 .eDiaCuenta  {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
-	color: #FFFFFF;
-	text-align:center;
-	background-color:#0099FF;
+	background-color: #F09EB8;
+	border-radius: 3px;
+	border: solid #C73463 1px;
+	color: #C73463;
+	font-size: 8pt;
 }
 .eDiaSabadoL {
 	font-family: "TChevin"; 
@@ -81,34 +87,60 @@ src: url('../fonts/Chevin-Thin.otf')   format('opentype');
 	background-color:#FF0000;
 }
 .eDiaMedio {
-	font-family: "TChevin"; 
+	background-color: #F1D76E;
+	border-radius: 3px;
+	border: solid #947D22 1px;
+	color: #947D22;
 	font-size: 8pt; 
-	color: #FFFFFF;
 	text-align:center;
-	background-color:#FFCC00;
-}
+}	
 .eDiaFinSemana {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
-	color: #71BF44;
-	text-align:center;
 	background-color:#F1F1E9;
+	border: solid #CCC 1px;
+	color: #71BF44;
+	font-size: 8pt; 
+	text-align:center;
 }
 .eDiaLaboral {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
-	color: #58595B;
-	text-align:center;
 	background-color:#F1F1E9;
+	border: solid #CCC 1px;
+	color: #58595B;
+	font-size: 8pt; 
+	text-align:center;
+}
+.diciembre,
+.enero,
+.febrero {
+	background: #0099FF;
+	border: solid #052E49 1px;
+	color: #052E49;
+}
+.marzo,
+.abril,
+.mayo {
+	background: #83599B;
+	border: solid #27043C 1px;
+	color: #27043C;
+}
+.junio,
+.julio,
+.agosto {
+	background: #F19B1A;
+	border: solid #6F470B 1px;
+	color: #6F470B;
+}
+.septiembre,
+.octubre,
+.noviembre {
+	background: #9B5735;
+	border: solid #491C06 1px;
+	color: #491C06;
 }
 a{
 	text-decoration:none;	
 	cursor: default;
 }
 a:hover{
-	text-decoration:underline;
-	/*background-color:#CAE0E7;	*/
-	color:#CCCCCC;
 	cursor: default;
 }
 a:active{

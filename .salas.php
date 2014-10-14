@@ -23,10 +23,14 @@ $fecha_inicio = strtotime($_POST['fecha']." ".$_POST['hora_inicio']);
 $fecha_fin = strtotime($_POST['fecha']." ".$_POST['hora_termino']);
 $fecha_final = $fecha_fin - 600;
 
-mysql_select_db($database_productos,$productos);
+$fecha_inicioNormal = $_POST['fecha']." ".$_POST['hora_inicio'];
+$fecha_finNormal = $_POST['fecha']." ".$_POST['hora_termino'];
+
+//mysql_select_db($database_productos,$productos);
 
 $sala = $_POST['sala'];
-$consulta=mysql_query("SELECT sala, inicio, fin from salas WHERE sala='$sala' ");
+$query = "SELECT sala, inicio, fin from salas WHERE sala='$sala' ";
+$consulta = $mysqli->query($query);
 // Verificamos si hemos realizado bien nuestro Query
 if(!$consulta){
 exit("Error en la consulta SQL");
@@ -49,7 +53,7 @@ echo "<section id='resultado'>";
     if (($fecha_final) >= $fecha_inicio)
     { //if 1
         $f = 0; 
-        while ($row_consulta = mysql_fetch_assoc($consulta))
+        while ($row_consulta=$consulta->fetch_array(MYSQLI_ASSOC))
         {
           if ( 
                 (($fecha_inicio > $row_consulta['inicio']) AND ($fecha_inicio<$row_consulta['fin'])) 
@@ -74,15 +78,17 @@ echo "<section id='resultado'>";
       $f=-1;  //valor de $f por ser fecha anterior a la actual
   }
     if ($f==0) {//if f
-      $fecha = strftime("%H:%M:%S ") . " " . strftime("%Y-%m-%d ");
-      $resultado = mysql_query("INSERT INTO salas (nombre_evento, sala, inicio, fin, observaciones, nombre_solicita, departamento, ext, equipo, coffe, participantes,ip, host, fecha) VALUES ('{$n_evento}', '{$_POST['sala']}', '{$fecha_inicio}', '{$fecha_fin}', '{$n_observaciones}', '{$n_solicita}', '{$n_departamento}', '{$_POST['ext']}', '{$a_equipo}', '{$a_coffe}', '{$_POST['no_participantes']}','{$ip_host}','{$nombre_host}'),'{$fecha}')", $productos);
+      $fecha = strftime("%Y-%m-%d ") . " " . strftime("%H:%M:%S ");
+      $insertar = "INSERT INTO salas (nombre_evento, sala, inicio, fin, observaciones, nombre_solicita, departamento, ext, equipo, coffe, participantes,ip, host, fecha, fechaInicio, FechaFin) VALUES ('{$n_evento}', '{$_POST['sala']}', '{$fecha_inicio}', '{$fecha_fin}', '{$n_observaciones}', '{$n_solicita}', '{$n_departamento}', '{$_POST['ext']}', '{$a_equipo}', '{$a_coffe}', '{$_POST['no_participantes']}','{$ip_host}','{$nombre_host}','{$fecha}','{$fecha_inicioNormal}','{$fecha_finNormal}')";
+      $resultado = $mysqli->query($insertar);
+      //var_dump($resultado);
          if (!$resultado) {
             $mensaje  = $resp_ocupada;
             die($mensaje);
         } else { 
           echo "La ".$_POST['sala']." se ha apartado satisfactoriamente";
           echo "<br>";
-          require_once("html_mail.php");
+          require"html_mail.php";
         }
       }//fin if f
 
