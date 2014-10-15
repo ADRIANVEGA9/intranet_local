@@ -14,7 +14,7 @@ src: url('../fonts/Chevin-Thin.otf')   format('opentype');
 table {
 	border-collapse: separate;
 	border-radius: 2px;
-	border-spacing: .2em;
+	border-spacing: .15em;
 	border: solid #CAE0B1 1px;
 }
 .dayofweek {
@@ -24,46 +24,33 @@ table {
 	border: solid #ccc 1px;
 	color: #165B91;
 	font-size: 8pt;
+	height: 2em;
 	text-align: center;
 }
 .eDiaActual {
 	background-color: #CAE0B1;
-	border:solid;
-	border-color:#3393DF;
 	border-radius: 20%;
+	border: solid #3393DF 1px;
 	color: #165B91;
 	display: block;
 	font-size: .9em;
-	height: 100%;
+	height: 20px;
+	width: 25px;
 }
 .eDiaActual:hover {
 	background-color:#165B91;
-	border:solid;
 	border-color:#3393DF;
 	color: #CAE0B1;
 }
-.xeDiaActual {/*formato alterno para día actual*/
-	font-size: 8pt; 
-	color: #F1F1E9;
-	text-align:center;
-	background-color:#165B91;
-	border:solid;
-	border-color:#933;
-}
 .eDiaObligatorio {
 	background-color: #CBECB8;
-	border: solid #71BF44 1px;
 	border-radius: 3px;
+	border: solid #71BF44 1px;
 	color: #71BF44;
 	font-size: 8pt;
+	height: 20px;
 	text-align: center;
-}
-.eDiaVacaciones {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
-	color: #FFFFFF;
-	text-align:center;
-	background-color:#6666CC;
+	width: 25px;
 }
 .eDiaCuenta  {
 	background-color: #F09EB8;
@@ -71,20 +58,8 @@ table {
 	border: solid #C73463 1px;
 	color: #C73463;
 	font-size: 8pt;
-}
-.eDiaSabadoL {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
-	color: #FFFFFF;
-	text-align:center;
-	background-color:#71BF44;
-}
-.eDiaSuspension {
-	font-family: "TChevin"; 
-	font-size: 8pt; 
-	color: #FFFFFF;
-	text-align:center;
-	background-color:#FF0000;
+	height: 20px;
+	width: 25px;
 }
 .eDiaMedio {
 	background-color: #F1D76E;
@@ -92,47 +67,53 @@ table {
 	border: solid #947D22 1px;
 	color: #947D22;
 	font-size: 8pt; 
+	height: 20px;
 	text-align:center;
+	width: 25px;
 }	
 .eDiaFinSemana {
 	background-color:#F1F1E9;
 	border: solid #CCC 1px;
 	color: #71BF44;
 	font-size: 8pt; 
+	height: 20px;
 	text-align:center;
+	width: 25px;
 }
 .eDiaLaboral {
 	background-color:#F1F1E9;
 	border: solid #CCC 1px;
 	color: #58595B;
 	font-size: 8pt; 
+	height: 20px;
 	text-align:center;
+	width: 25px;
 }
 .diciembre,
 .enero,
 .febrero {
-	background: #0099FF;
+	background: #B7E3FF;
 	border: solid #052E49 1px;
 	color: #052E49;
 }
 .marzo,
 .abril,
 .mayo {
-	background: #83599B;
+	background: #C3ABD1;
 	border: solid #27043C 1px;
 	color: #27043C;
 }
 .junio,
 .julio,
 .agosto {
-	background: #F19B1A;
+	background: #F1CE99;
 	border: solid #6F470B 1px;
 	color: #6F470B;
 }
 .septiembre,
 .octubre,
 .noviembre {
-	background: #9B5735;
+	background: #E6C2B0;
 	border: solid #491C06 1px;
 	color: #491C06;
 }
