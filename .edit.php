@@ -1,5 +1,7 @@
 <?php require_once("Connections/conect.php"); 
 $today = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")); 
+$hoy = strftime("%H:%M:%S ") . " " . strftime("%Y-%m-%d ");
+//var_dump($hoy);
   $nombre_host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
   $ip_host = gethostbyname($_SERVER['REMOTE_ADDR']);   
 $n_evento=$_POST[utf8_encode('nombre_evento')];
@@ -75,7 +77,7 @@ echo "<section id='resultado'>";
       $f=-1;   
   }
     if ($f==0) {//if f
-      $resultado = mysql_query("UPDATE salas SET (nombre_evento='{$n_evento}', sala='{$_POST['sala']}', inicio='{$fecha_inicio}', fin='{$fecha_fin}', observaciones='{$n_observaciones}', nombre_solicita='{$n_solicita}', departamento='{$n_departamento}', ext='{$_POST['ext']}', equipo='{$a_equipo}', coffe='{$a_coffe}', participantes='{$_POST['no_participantes']}',ip='{$ip_host}', host='{$nombre_host}') WHERE sala='$sala' AND inicio='$date'", $productos);
+      $resultado = mysql_query("UPDATE salas SET (nombre_evento='{$n_evento}', sala='{$_POST['sala']}', inicio='{$fecha_inicio}', fin='{$fecha_fin}', observaciones='{$n_observaciones}', nombre_solicita='{$n_solicita}', departamento='{$n_departamento}', ext='{$_POST['ext']}', equipo='{$a_equipo}', coffe='{$a_coffe}', participantes='{$_POST['no_participantes']}',ip='{$ip_host}', host='{$nombre_host}', fecha='{$hoy}') WHERE sala='$sala' AND inicio='$date'", $productos);
          if (!$resultado) {
             $mensaje  = $resp_ocupada;
             die($mensaje);

@@ -1,6 +1,5 @@
-<?php $m=7;
-?>
 <!doctype html>
+<?php  $m=7;  ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -122,10 +121,10 @@ function validarTxtNum(e) {
 				    <br>
 				  		<input name="sala" type="radio" id="sala_3" form="salas" tabindex="12" value="Sala Cerrajes" required>
 					    <label for="sala_3">Sala Cerrajes<span></span></label>
-				    <br>
+				    <br><!-- 
 				  		<input name="sala" type="radio" id="sala_4" form="salas" tabindex="13" value="Sala de juntas" required>
 					    <label for="sala_4">Sala de juntas<span></span></label>
-				    <br>
+				    <br> -->
 				  		<input name="sala" type="radio" id="sala_5" form="salas" tabindex="13" value="Sala de Juntas Tiendas" required>
 					    <label for="sala_5">Sala de Juntas Tiendas<span></span></label>
 				    <br>

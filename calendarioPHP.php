@@ -13,7 +13,15 @@ function CalendarioPHP($year, $month, $day_heading_length)
 	$obligatorio[4] = '16/9/2014'; // 16 de septiembre 
 	$obligatorio[5] = '17/11/2014'; // por 20 nov
 	$obligatorio[6] = '25/12/2014'; // 25 de diciembre 
-	$obligatorio[7] = '1/1/2015'; // 1 de enero 
+	$obligatorio[7] = '1/1/2015'; // 1 de enero	
+	$obligatorio[8] = '2/2/2015'; // por 5 de Febrero 
+	$obligatorio[9] = '16/3/2015'; // por 20 de marzo
+	$obligatorio[10] = '1/5/2015'; // 1 de mayo 
+	$obligatorio[11] = '16/9/2015'; // 16 de septiembre 
+	$obligatorio[12] = '16/11/2015'; // por 20 nov
+	$obligatorio[13] = '25/12/2015'; // 25 de diciembre  
+	$obligatorio[14] = '1/1/2016'; // 1 de enero	
+
 	//echo sizeof($obligatorio); //conocer la longitud del arreglo
 	//a cuenta de vacaciones
 	$cuenta[0] = '17/4/2014'; // 17 abril
@@ -34,7 +42,7 @@ function CalendarioPHP($year, $month, $day_heading_length)
 	$first_of_month = mktime (0,0,0, $month, 1, $year); //obtiene primer dia del mes
 	//Formato de mktime(hr,min,seg,mes,dia,año)
 
-	static $day_headings = array('dom','lun','mar','mier','jue','vie','sab'); 
+	static $day_headings = array('D','L','M','M','J','V','S'); 
 	$maxdays = date('t', $first_of_month);
 	//'t' obtiene el numero de dias que tiene el mes seleccionado (de 28 a 31)
 	$date_info = getdate($first_of_month);

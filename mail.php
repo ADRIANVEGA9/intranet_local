@@ -21,10 +21,10 @@ if (isset($orden)) {
 if (isset($criterio))
 {
 	$txt_criterio = $criterio;
-	$criterio = " where nombre like '%" . $txt_criterio . "%' or direccion like '%" . $txt_criterio . "%' or depto like '%" . $txt_criterio . "%' or unidad like '%" . $txt_criterio . "%' or puesto like '%" . $txt_criterio . "%'";
+	$criterio = " where correos.activo = 1 AND ( nombre like '%" . $txt_criterio . "%' or direccion like '%" . $txt_criterio . "%' or depto like '%" . $txt_criterio . "%' or unidad like '%" . $txt_criterio . "%' or puesto like '%" . $txt_criterio . "%')";
 }else{
 	$txt_criterio = "CerracoMex";
-	$criterio = " where unidad like '%" . $txt_criterio . "%'";	
+	$criterio = " where correos.activo = 1 AND unidad like '%" . $txt_criterio . "%'";	
 }
 
 $sql				=	"SELECT * FROM intranet.correos ".$criterio;
@@ -105,7 +105,7 @@ $regUni = $resUni->num_rows;
 						echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=nombre&criterio=".$txt_criterio."'>Nombre</a></th>";
 						echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=direccion&criterio=".$txt_criterio."'>Direcci&oacute;n</a></th>";
 						echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=depto&criterio=".$txt_criterio."'>Sucursal/Departamento</a></th>";
-						echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=puesto&criterio=".$txt_criterio."'>Puesto</a></th>";
+						// echo "<th width='25%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=puesto&criterio=".$txt_criterio."'>Puesto</a></th>";
 						while($registro=$res->fetch_array(MYSQLI_ASSOC ))
 						{
 							//var_dump($registro);
@@ -116,7 +116,7 @@ $regUni = $resUni->num_rows;
 							    <td><b><? echo $registro['nombre']; ?></b></font></td>
 							    <td><b><a href="mailto:<? echo $registro["direccion"]; ?>"><? echo $registro["direccion"]; ?></a></b></font></td>
 							    <td><b><? echo $registro["depto"]; ?></b></font></td>
-							    <td><b><? echo $registro["puesto"]; ?></b></font></td>
+							    <!-- <td><b><? echo $registro["puesto"]; ?></b></font></td> -->
 							  </tr>
 							<!-- fin tabla resultados -->
 						<?

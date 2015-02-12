@@ -71,7 +71,7 @@ $regUni = $resUni->num_rows;
 							{
 								echo "active";
 							}
-							echo"'href='".$_SERVER["PHP_SELF"]."?&criterio=".$rUnidad["unidad"]."'>".$rUnidad["sucursal"]."</a></section>";
+							echo"'href='".$_SERVER["PHP_SELF"]."?&criterio=".$rUnidad["unidad"]."'>".$rUnidad["unidad"]."</a></section>";
 						}
 				?>				
 				<section id="busqueda">
@@ -102,7 +102,7 @@ $regUni = $resUni->num_rows;
 //var_dump($criterio);
 						echo "<table width='100%' border='0' cellspacing='1' cellpadding='1'>";
 						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=nombre&criterio=".$txt_criterio."'>Nombre</a></th>";
-						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=sucursal&criterio=".$txt_criterio."'>sucursal/estado</a></th>";
+						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=sucursal&criterio=".$txt_criterio."'>sucursal</a></th>";
 						echo "<th width='33%'><a class='ord' href='".$_SERVER["PHP_SELF"]."?&orden=id&criterio=".$txt_criterio."'>id</a></th>";
 						while($registro=$res->fetch_array(MYSQLI_ASSOC))
 						{							

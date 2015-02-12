@@ -31,7 +31,7 @@ aside article img{
 }
 footer {
 	background-color: #7AC143;
-	border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 3px 3px;
 	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.4),0px 0px 0px 0px rgba(0, 0, 0, 0.4);
 	color: #FFFFFF;
 	font-family: "TChevin";
@@ -47,7 +47,7 @@ header,nav,section,article,aside,footer,hgroup, figure { /*Elementos semanticos 
 }
 header {
 	background-color: #7AC143;	/* RGB (122,193,67)*/
-	border-radius: 5px 5px 0px 0px;
+	border-radius: 3px 3px 0px 0px;
 	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.4),0px 0px 0px 0px rgba(0, 0, 0, 0.4);
 	height: auto;
 	margin: 0 auto;
@@ -105,7 +105,10 @@ label {
 	overflow: hidden;
 	width: 1000px;
 }
-#cumple, #home {
+#cumple {
+	
+}
+#home {
 	width: 100%;
 }
 #logo { /*logo cerrajes en header*/

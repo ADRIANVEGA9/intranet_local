@@ -20,10 +20,10 @@ if (isset($orden)) {
 if (isset($criterio))
 {
 	$txt_criterio = $criterio;
-	$criterio = " where nombre like '%" . $txt_criterio . "%' or departamento like '%" . $txt_criterio . "%' or ext like '%" . $txt_criterio . "%' or unidad like '%" . $txt_criterio . "%' ";
+	$criterio = " where activo = 1 AND (nombre like '%" . $txt_criterio . "%' or departamento like '%" . $txt_criterio . "%' or ext like '%" . $txt_criterio . "%' or unidad like '%" . $txt_criterio . "%' )";
 }else{
 	$txt_criterio = "CerracoMex";
-	$criterio = " where unidad like '%" . $txt_criterio . "%'";	
+	$criterio = " where activo = 1 AND unidad like '%" . $txt_criterio . "%'";	
 }
 
 $sql				=	"SELECT * FROM intranet.directorio ".$criterio;
@@ -59,7 +59,7 @@ $regUni = $resUni->num_rows;
 	<header>
         <section id="logo"><a href="http://www.cerrajes.com"  target="_blank"><img src="imagenesSitio/logo.png"></a></section>
         <section id="titulo">directorio - extensiones</section>
-		<?php  require"menu.php"; ?>
+		<?php  require_once("menu.php") ?>
 	</header>
 	<section id="contenedor">
 

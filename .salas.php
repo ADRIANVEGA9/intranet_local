@@ -1,4 +1,4 @@
-<?php require_once("Connections/conect.php"); 
+<?php require"Connections/conect.php"; 
 $today = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")); 
   $nombre_host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
   $ip_host = gethostbyname($_SERVER['REMOTE_ADDR']);   

@@ -1,20 +1,20 @@
 <?php
 if (isset($_POST['equipo'])) {
   $a_equipo = implode(', ',$_POST['equipo']);//convertir Array de checkbox en cadena separada por coma ","
-  $to  = 'avega@cerrajes.com' . ', ';//intranet.sistemas@cerrajes.com
+  $to  = 'intranet.sistemas@cerrajes.com' . ', ';
 } else {
   $a_equipo = "Sin equipo";
 }
 
 if (isset($_POST['coffe'])) {
   $a_coffe = implode(', ',$_POST['coffe']);  
-  $to  .= 'avega@cerrajes.com' . ', ';//mcabrera@cerrajes.com
+  $to  .= 'mcabrera@cerrajes.com' . ', ';
 } else {
   $a_coffe = "Sin coffe break"; 
 }
 // multiple recipients
-$to .= 'avega@cerrajes.com' . ', '; // note the comma epacheco@cerrajes.com
-$to .= 'avega@cerrajes.com';//intranet@cerrajes.com
+$to .= 'epacheco@cerrajes.com' . ', '; // note the comma
+$to .= 'intranet@cerrajes.com';
 
 // subject
 $subject = 'Apartado de sala';
@@ -84,7 +84,12 @@ body {
   color:#494646;
   width: 100%;
 }
-
+#fecha_captura {
+  color:#FFF;
+  font-size:.8em;
+  text-align:right;
+  width:100%;
+}
 .circulo {
   background: #FEFEFE;
   color: #71BF44;
@@ -108,6 +113,7 @@ body {
 </style>
 <body>
   <section id="salas">
+  <span id="fecha_captura">'.$fecha_captura.'</span>
     <div id="logo">
       Formato de apartado de salas
     </div>
@@ -160,7 +166,7 @@ $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
 // Additional headers
-$headers .= 'To: Apartado de salas <avega@cerrajes.com>' . "\r\n";//epacheco@cerrajes.com
+$headers .= 'To: Apartado de salas <epacheco@cerrajes.com>' . "\r\n";
 $headers .= 'From: Intranet - Apartado de sala <intranet@cerrajes.com>' . "\r\n";
 //$headers .= 'Cc: csoto@cerrajes.com' . "\r\n";
 $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";

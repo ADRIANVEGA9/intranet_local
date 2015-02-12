@@ -32,22 +32,6 @@
         overlayOpacity: 0.8
     });
 </script>
-<?php if (($ip_host == '192.168.1.880') OR ($ip_host == '192.168.1.20')) {?>
-    <script type="text/javascript">
-    // window.onload = function() {
-
-    //     // open a welcome message as soon as the window loads
-    //     Shadowbox.open({
-    //         content:    '<div id="welcome"><img id="hoy" src="ImagenesSitio/hoy.png" /></>',
-    //         player:     "html",
-    //         title:      "¡Felicidades!",
-    //         height:     680,
-    //         width:      1180
-    //     });
-
-    // };
-    </script>
-<?php } ?>
 </head>
 <body>
 <header>
@@ -55,12 +39,10 @@
         <section id="titulo">cumpleaños</section>
     <?php  require_once("menu.php") ?>
 </header>
-    <section id="contenedor">    
-    <?php if (($ip_host <> '192.168.1.880') AND ($ip_host <> '192.168.1.20')) {?>
-        <!-- <a href="ImagenesSitio/hoy.png" rel="shadowbox"> --><!-- COMENTAR ESTA LINEA PARA DESACTIVAR -->
-    <?php } ?>
-            <img id="cumple" src="ImagenesSitio/cumple.jpg" />
-        </a>
+    <section id="contenedor"> 
+        <section id="cumple">
+            
+        </section>   
     </section>
     <?php  require_once("footer.html") ?>   
 </body>
